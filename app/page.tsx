@@ -11,7 +11,10 @@ import { NewPatientForm } from "@/components/new-patient-form"
 import { WaitingQueue } from "@/components/waiting-queue"
 import { EmergencyView } from "@/components/emergency-view"
 import { PatientsProvider } from "@/components/patients-store"
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils" 
+import BuyCarnetCard from "@/components/buy-carnet-card"
+
+
 
 const mobileNav: { id: View; label: string; icon: typeof LayoutDashboard }[] = [
   { id: "dashboard", label: "Accueil", icon: LayoutDashboard },
@@ -82,8 +85,9 @@ export default function Page() {
             </button>
           )
         })}
-      </nav>
-    </div>
+      <BuyCarnetCard />
+
+ </div>
     </PatientsProvider>
   )
 }
